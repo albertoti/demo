@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Contacto - Tecnicos Independientes</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
+
+    <!--[if IE]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+                  <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="..."><!--<a class="navbar-brand" href="#">TI</a>-->
+                  </a>
+             
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="#about">Acerca de</a></li>
+                    <li class="active"><a href="#contact">Contacto</a></li>
+                </ul>
+            </div><!--.nav-collapse -->
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h3 class="text-center">Rellena los siguientes campos para programar una cita:</h3>
+                </div>
+            
+<!-- Inicia la forma // Agregar text-reader support-->
+                <div class="col-md-2"></div>
+                     <div class="col-md-10">
+                     
+                      <form class="form-horizontal" id="myForm">
+                         <div class="form-group">
+                            <label for="inputName" class="col-sm-2 control-label">Nombre</label>
+                            <div class="col-sm-5">
+                            <input type="text" class="form-control" maxlength="50" id="inputNameForm" placeholder="Jane Doe">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">  
+                            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                            <div class="col-sm-5">
+                                  <input type="email" class="form-control" id="inputEmail1" maxlength="80" placeholder="janedoe@ejemplo.com">
+                            </div>
+                          </div>
+                          
+                          <div class="form-group">
+                            <label for="inputTelephone" class="col-sm-2 control-label">Telefono</label>
+                            <div class="col-sm-3">
+                            <input type="text" class="form-control" id="inputTelephone" maxlength="25" placeholder="646-175-46-54">
+                            </div>
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inputCheckCel" value="true">
+                                    Marca esta opcion si el telefono es celular.
+                                </label>
+                          </div>
+
+                          <div class="form-group">  
+                            <label for="inputComments" class="col-sm-2 control-label">Comentarios</label>
+                            <div class="col-sm-5">
+                                  <textarea class="form-control" name="comments" maxlength="500" cols="30" rows="5"></textarea>
+                            </div>
+                          </div>
+                          <div class="col-sm-offset-3">
+                          
+                           <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal" id="btnCita">Generar cita</button>
+                             
+                              <script type="text/javascript">
+                               
+                                    $('#btnCita').click(function() {
+                                        $('.cuerpodelcorreo').append("<h2>Hola mundo</h2>");                                        
+                                    });
+                              
+                              </script>>
+                               
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                  <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                      </div>
+                                      <div class="modal-body">
+                                        <div class="cuerpodelcorreo"></div>
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                        <button type="button" class="btn btn-primary">Copiar al portapapeles</button>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                          </div>
+                          
+                      </form>
+                      
+                      </div>
+
+<!--Termina la forma-->
+
+  
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
