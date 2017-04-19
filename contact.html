@@ -9,8 +9,56 @@
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <style>body{padding-top:50px;}.starter-template{padding:40px 15px;text-align:center;}</style>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  
+    <style>body{padding-top:50px;}.starter-template{padding:45px 15px;text-align:center;}.aFuerzas{color:red;}.alerta-roja{display:none;}
+	.customjumbotron{
+  box-shadow: 0vh 1vw 2vh #eee;
+  background-color: #fff;
+        font-family: 'Open Sans', sans-serif;
+margin-bottom:5vh;
+        border-radius: 20px;
+	
+	}
+	.mainrowone {
+  background-color: #eee; 
+	}
+	.post-it {
+background:#fefabc; 
+padding:5vh 5vw 8vh 3vw; 
+font-family: 'Gloria Hallelujah', cursive; 
+font-size:20px !important; 
+ 
+color: #000; 
+-moz-transform: rotate(2deg);
+-webkit-transform: rotate(2deg);
+-o-transform: rotate(2deg);
+-ms-transform: rotate(2deg);
+transform: rotate(2deg);
+box-shadow: 0px 4px 6px #333;
+-moz-box-shadow: 0px 4px 6px #333;
+-webkit-box-shadow: 0px 4px 6px #333;
+}
+        	.postleft {
+background:#fefabc;
+left: 10px;
+padding:1vh 1vw 3vh 1vw; 
+font-family: 'Gloria Hallelujah', cursive; 
+font-size: 15px;
+ 
+color: #000; 
+-moz-transform: rotate(2deg);
+-webkit-transform: rotate(2deg);
+-o-transform: rotate(2deg);
+-ms-transform: rotate(2deg);
+transform: rotate(2deg);
+box-shadow: 0px 4px 6px #333;
+-moz-box-shadow: 0px 4px 6px #333;
+-webkit-box-shadow: 0px 4px 6px #333;
+}
+	</style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!--[if IE]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -18,7 +66,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -43,93 +91,159 @@
             </div><!--.nav-collapse -->
         </div>
     </nav>
-
-    <div class="container">
+<div class="container-fluid mainrowone">
+    <div class="container" style="background-color:#fff;padding:1vh 2vw">
         <div class="row">
-            <div class="col-md-12">
-                <div class="jumbotron">
-                    <h3 class="text-center">Rellena los siguientes campos para programar una cita:</h3>
+            <div class="col-sm-12">
+                <div class="jumbotron text-center customjumbotron">
+                    <h2>Tu opinion nos ayuda a mejorar!</h2><p><small>Rellena los campos si tienes algun comentario, duda o sugerencia.</small></p>
                 </div>
-            
+				</div>
+			</div>
+        <div class="row" style="margin-top:10px"></div>
 <!-- Inicia la forma // Agregar text-reader support-->
-                <div class="col-md-2"></div>
-                     <div class="col-md-10">
+			<div class="row">
+				<div class="col-sm-8 col-sm-offset-2 alerta-roja">
+				<div class="alert alert-danger dismissible" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><strong>Parece que algo salio mal!</strong>&nbsp&nbspIntenta llenar los campos faltantes</div>
+			</div>
+			</div>
+            <div class="row" style="">
+                <div class="col-md-3 hidden-sm hidden-xs postleft"><strong>Puedes generar las citas que quieras! </strong><p style="margin-top:10px">Estamos por mudarnos de servidor para que se puedan enviar en automatico.</p></div>
+                     <div class="col-md-9 col-sm-11">
                      
                       <form class="form-horizontal" id="myForm">
-                         <div class="form-group">
-                            <label for="inputName" class="col-sm-2 control-label">Nombre</label>
-                            <div class="col-sm-5">
-                            <input type="text" class="form-control" maxlength="50" id="inputNameForm" placeholder="Jane Doe">
+					  
+                         <div class="form-group has-feedback">
+                            <label for="inputName" class="col-sm-2 control-label">Nombre <span class="aFuerzas">*</span></label>
+                            <div class="col-md-5 col-sm-7" data-toggle="popover" title="" data-content="Vaya!, se te olvido poner tu nombre.">
+                            <input type="text" class="form-control" maxlength="50" id="inputNameForm" placeholder="Jane Doe"><span class="state-icon"></span>
+                            </div>
+                          </div>
+						  
+                          <div class="form-group has-feedback">  
+                            <label for="inputEmail" class="col-sm-2 control-label">Email <span class="aFuerzas">*</span></label>
+                            <div class="col-md-5 col-sm-7" data-toggle="popover" title="" data-content="Compartenos un correo electronico.">
+                                  <input type="email" class="form-control" id="inputEmail" maxlength="80" placeholder="janedoe@ejemplo.com"><span class="state-icon"></span>
                             </div>
                           </div>
                           
-                          <div class="form-group">  
-                            <label for="inputEmail" class="col-sm-2 control-label">Email</label>
-                            <div class="col-sm-5">
-                                  <input type="email" class="form-control" id="inputEmail1" maxlength="80" placeholder="janedoe@ejemplo.com">
-                            </div>
-                          </div>
-                          
-                          <div class="form-group">
-                            <label for="inputTelephone" class="col-sm-2 control-label">Telefono</label>
+                          <div class="form-group has-feedback">
+                            <label for="inputTelephone" class="col-sm-2 control-label">Telefono <span class="aFuerzas">*</span></label>
                             <div class="col-sm-3">
-                            <input type="text" class="form-control" id="inputTelephone" maxlength="25" placeholder="646-175-46-54">
-                            </div>
-                                <label class="checkbox-inline">
-                                    <input type="checkbox" id="inputCheckCel" value="true">
-                                    Marca esta opcion si el telefono es celular.
+                            <input type="text" class="form-control" id="inputTelephone" maxlength="15" placeholder="646-175-46-54" data-toggle="popover" title="" data-content="Por si no te podemos lozalizar por correo."><span></span>                                <label class="checkbox-inline">
+                                    <input type="checkbox" id="inputCheckCel" value="celularyes">
+                                    ¿Es celular?
                                 </label>
+                            </div>
+
                           </div>
 
                           <div class="form-group">  
                             <label for="inputComments" class="col-sm-2 control-label">Comentarios</label>
-                            <div class="col-sm-5">
-                                  <textarea class="form-control" name="comments" maxlength="500" cols="30" rows="5"></textarea>
+                            <div class="col-md-5 col-sm-7">
+                                  <textarea class="form-control" id="comments" maxlength="500" cols="30" rows="5"></textarea>
                             </div>
                           </div>
-                          <div class="col-sm-offset-3">
-                          
-                           <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal" id="btnCita">Generar cita</button>
-                             
-                              <script type="text/javascript">
-                               
-                                    $('#btnCita').click(function() {
-                                        $('.cuerpodelcorreo').append("<h2>Hola mundo</h2>");                                        
-                                    });
-                              
-                              </script>>
+
                                
                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                                   <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
                                       <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                                        <h3 class="modal-title" id="myModalLabel" style="font-family:Roboto">Hey! Hemos generado tu cita.<p><small>Ahora solo copia y pega este formato en un nuevo correo para que podamos comunicarnos contigo.</small></p></h3>
                                       </div>
                                       <div class="modal-body">
-                                        <div class="cuerpodelcorreo"></div>
-                                      </div>
+											<div class="col-sm-8 col-md-offset-2 post-it">
+                                        <div class="row">
+											<div class="col-sm-12">
+												<h3 id="modalName"><span></span></h3>
+											</div>
+											</div>
+											<div class="row">
+											<div class="col-sm-6">
+												<h4 id="modalEmail"><span></span></h4>
+											</div>
+											</div>
+											<div class="row">
+											<div class="col-sm-6">
+												<h4 id="modalTel"><span></span></h4>
+											</div>
+											
+											</div>
+                                        <div class="row">
+											<div class="col-sm-12">
+												<h4 id="modalComment"><span></span></h4>
+											</div>
+											</div>
+											</div>
+											
+										</div>
                                       <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-primary">Copiar al portapapeles</button>
-                                      </div>
+											<div class="row">
+											<div class="col-sm-12">
+                                       
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Salir</button></div>
+                                      </div></div>
                                     </div>
                                   </div>
                                 </div>
-                          </div>
+								
+                          <div class="col-sm-offset-4 col-md-offset-3">
                           
+                           <button class="btn btn-primary" type="button" id="btnCita">Generar cita</button>
+                            
+                              <script type="text/javascript">
+								
+									$('#myForm input').blur(function()
+										{
+											if( !$(this).val() ) {
+												  $(this).parent().popover('show').find('span').replaceWith('<span class="glyphicon glyphicon-remove form-control-feedback state-icon"></span>');
+												  $(this).parents(".form-group").removeClass('has-success').addClass('has-error');
+											}else{
+												$(this).parent().popover('destroy').find('span').replaceWith('<span class="glyphicon glyphicon-ok form-control-feedback state-icon"></span>');
+												$(this).parents(".form-group").removeClass('has-error').addClass('has-success');
+												
+												
+											}
+										});
+                                    $('#btnCita').click(function() {
+									if($('#inputNameForm').val()&&$('#inputEmail').val()&&$('#inputTelephone').val()){
+										$('.alerta-roja').fadeOut();
+										$('#myModal').modal('toggle');
+										var name = $('#inputNameForm').val();
+										var email = $('#inputEmail').val();
+										var tel = $('#inputTelephone').val();
+										if($('#inputCheckCel').is(':checked')) {
+										
+											tel="Celular: "+tel;
+										}
+										var comments = $('#comments').val();
+										
+                                       $('#modalName span').replaceWith("<span>De: "+name+"</span>")
+									   $('#modalTel span').replaceWith("<span>"+tel+"</span>")
+                                       $('#modalEmail span').replaceWith("<span>"+email+"</span>")
+                                       $('#modalComment span').replaceWith("<span>"+comments+"</span>")
+									   }else{
+									   $('.alerta-roja').fadeIn(1100);
+									   
+									   }
+                                    });
+                              
+                              </script>
+                          </div>
+                           <p style="margin-top:2vh"><span class="aFuerzas">*</span> <strong>Campo obligatorio</strong></p>
                       </form>
-                      
-                      </div>
+                    
 
 <!--Termina la forma-->
 
   
             </div>
         </div>
+		
     </div>
+</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
