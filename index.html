@@ -9,14 +9,29 @@
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
     </head>
     <style>
 body{
 position: relative;
 padding-top:50px;
 }
-.starter-template{
-padding:40px 15px;
+.custombox{
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.fade-alert
+        {
+            cursor: pointer;
+        }
+.white-text{
+    color:white;    
+}
+.alert-template{
+border-radius: 50px;
+padding:0px 5px 4px 5px;
 text-align:center;
 }
 @media (min-width: 992px)
@@ -31,9 +46,10 @@ text-align:center;
 .bs-docs-sidebar.affix {
     position: static;
 }
-@media (min-width: 768px)
-.bs-docs-sidebar {
-    padding-left: 20px;
+@media screen and (min-width: 480px) {
+    .hidden-hidden {
+        display: none;
+    }
 }
 .affix {
     position: fixed;
@@ -66,8 +82,8 @@ text-align:center;
             </div>
 
             <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Inicio</a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active smooth-scroll"><a href="#begin" class="smooth-scroll">Inicio</a></li>
                     <li><a href="proyecto.html">Proyectos</a></li>
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
@@ -78,29 +94,133 @@ text-align:center;
     <div class="container">
 	
 	<!--Initial info alert-->
-		<div class="alert alert-info alert-dismissible" role="alert">
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;
-			</span>
-			</button>
-				<div class="starter-template">
-                    <h2><strong>Este sitio esta bajo construcción</strong></h2>
-					<small class="lead">Estamos trabajando para ofrecerte una experiencia completa. <i class="glyphicon glyphicon-thumbs-up"></i>
-					</small>
+		<div class="alert alert-warning fade-alert" role="alert">
+
+				<div class="alert-template">
+                    <strong>Este sitio esta bajo construcción: </strong>
+					Estamos trabajando para ofrecerte una experiencia completa.
 				</div>
+				<script type="text/javascript">
+                    $(document).ready(function(){
+$( ".fade-alert" ).click(function(){ 
+  $( this ).fadeOut( "slow" );
+});
+                    });
+            </script> 
 		</div><!--Final info alert-->
        
         <div class="row">
-           <div class="col-md-12">
-              
+           <div class="col-md-12" id="begin">
+             <div class="jumbotron" style="background-color:white">
+              <h1>Top level class</h1>
+                 <h2>A entry-level top service. Quality, design and vision.</h2>
                <a class="alert-link" href="contact.html">Contacta</a> y programa una cita!!
+               </div>
+           </div>
+        </div>
+<div class="hidden-hidden">
+    asjdlkajlksdjklajskldas
+</div>
+       
+        <div class="row">
+           <div class="col-md-4">
+             <div class="jumbotron white-text" style="background-color:#01bc8a">
+              <h2>Top level class</h2>
+                 <h3>A entry-level top service. Quality, design and vision.</h3>
+               <a class="alert-link smooth-scroll" href="#quality">Quality</a> y programa una cita!!
+               </div>
+           </div>
+           <div class="col-md-4">
+             <div class="jumbotron white-text" style="background-color:#72ff3f">
+              <h2>Top level class</h2>
+                 <h3>A entry-level top service. Quality, design and vision.</h3>
+               <a class="alert-link smooth-scroll" href="#design">Design</a> y programa una cita!!
+               </div>
+           </div>
+           <div class="col-sm-4">
+             <div class="jumbotron white-text" style="background-color:#c60000">
+              <h2>Top level class</h2>
+                 <h3>A entry-level top service. Quality, design and vision.</h3>
+               <a class="alert-link smooth-scroll" href="#vision">Vision</a> y programa una cita!!
+               </div>
            </div>
         </div>
         
+        <div class="custombox">
+           <div class="col-md-12" id="quality">
+             <div class="jumbotron white-text" style="background-color:#01bc8a" >
+              <h1>Top level class</h1>
+                 <h2>A entry-level top service. Quality, design and vision.</h2>
+               <a class="alert-link" href="contact.html">Contacta</a> y programa una cita!!
+                             <h1>Top level class</h1>
+                 <h2>A entry-level top service. Quality, design and vision.</h2>
+               <a class="alert-link" href="contact.html">Contacta</a> y programa una cita!!
+               </div>
+           </div>
+        </div>
         
+        <div class="custombox">
+           <div class="col-md-12" id="design">
+             <div class="jumbotron white-text" style="background-color:#72ff3f">
+              <h1>Top level class</h1>
+                 <h2>A entry-level top service. Quality, design and vision.</h2>
+               <a class="alert-link" href="contact.html">Contacta</a> y programa una cita!!
+                             <h1>Top level class</h1>
+                 <h2>A entry-level top service. Quality, design and vision.</h2>
+               <a class="alert-link" href="contact.html">Contacta</a> y programa una cita!!
+               </div>
+           </div>
+        </div>
         
+        <div class="custombox">
+           <div class="col-md-12" id="vision">
+             <div class="jumbotron white-text" style="background-color:#c60000">
+              <h1>Top level class</h1>
+                 <h2>A entry-level top service. Quality, design and vision.</h2>
+               <a class="alert-link" href="contact.html">Contacta</a> y programa una cita!!
+                             <h1>Top level class</h1>
+                 <h2>A entry-level top service. Quality, design and vision.</h2>
+               <a class="alert-link" href="contact.html">Contacta</a> y programa una cita!!
+               </div>
+           </div>
+        </div>
+        
+
+
     </div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script>/*$('a[href*="#"]:not([href="#"])').click(function() {
+  if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+    var target = $(this.hash);
+    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+    if (target.length) {
+      $('html, body').animate({
+        scrollTop: target.offset().top
+      }, 1000);
+      return false;
+    }
+  }
+});*/
+$(".smooth-scroll").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+</script>
 </body>
 </html>
